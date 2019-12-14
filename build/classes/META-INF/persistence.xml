@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="AccidentesAAPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>Modelo.Checklist</class>
+    <class>Modelo.Contrato</class>
+    <class>Modelo.EstadoServicio</class>
+    <class>Modelo.EstadoContrato</class>
+    <class>Modelo.Empresa</class>
+    <class>Modelo.Cuota</class>
+    <class>Modelo.ChecklistItem</class>
+    <class>Modelo.CargoExtra</class>
+    <class>Modelo.EstadoPago</class>
+    <class>Modelo.Servicio</class>
+    <class>Modelo.TipoServicio</class>
+    <class>Modelo.Pago</class>
+    <class>Modelo.TipoPago</class>
+    <class>Modelo.TipoUsuario</class>
+    <class>Modelo.Usuario</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@25.74.162.12:1521:xe"/>
+      <property name="javax.persistence.jdbc.user" value="admin"/>
+      <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+      <property name="javax.persistence.jdbc.password" value="oracle"/>
+      <property name="javax.persistence.schema-generation.database.action" value="create"/>
+    </properties>
+  </persistence-unit>
+</persistence>
