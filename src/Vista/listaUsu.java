@@ -8,7 +8,9 @@ package Vista;
 import Controlador.EmpresaJpaController;
 import Controlador.UsuarioJpaController;
 import Modelo.Empresa;
+import Modelo.TipoUsuario;
 import Modelo.Usuario;
+import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -20,17 +22,18 @@ import javax.swing.table.DefaultTableModel;
  */
 public class listaUsu extends javax.swing.JFrame {
 
+    private UsuarioJpaController controller;
+    DefaultTableModel modelo;
+    private Usuario usuario;
+    private TipoUsuario tipoUsuarioIdTipoUsuario;
+    Date fecha = new Date();
     int mousepX;
     int mousepY;
-    DefaultTableModel modelo;
-    private Empresa empresa;
-    private UsuarioJpaController controller;
-    private EmpresaJpaController controllerEmpresa;
     public listaUsu() {
         initComponents();
-        controllerEmpresa = new EmpresaJpaController();
+        controller = new UsuarioJpaController();
         cargarTabla();
-        
+        tipoUsuarioIdTipoUsuario = new TipoUsuario(BigDecimal.valueOf(3), "Cliente");
     }
 
     /**
@@ -275,7 +278,7 @@ public class listaUsu extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel13MousePressed
 
     private void btnBajaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBajaClienteActionPerformed
-        /*int fila = lstUsuario.getSelectedRow();
+        int fila = lstUsuario.getSelectedRow();
         if (fila != -1) {
             Object codigo = lstUsuario.getValueAt(fila, 0);
             String cod = String.valueOf(codigo);
@@ -307,11 +310,11 @@ public class listaUsu extends javax.swing.JFrame {
             }
         } else {
             JOptionPane.showMessageDialog(this, "Favor seleccionar la fila que desea desactivar", "Validación", 0);
-        }*/
+        }
     }//GEN-LAST:event_btnBajaClienteActionPerformed
 
     private void btnActivarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActivarActionPerformed
-        /*int fila = lstUsuario.getSelectedRow();
+        int fila = lstUsuario.getSelectedRow();
         if (fila != -1) {
             Object codigo = lstUsuario.getValueAt(fila, 0);
             String cod = String.valueOf(codigo);
@@ -341,7 +344,7 @@ public class listaUsu extends javax.swing.JFrame {
             }
         } else {
             JOptionPane.showMessageDialog(this, "Favor seleccionar la fila que desea re activar", "Validación", 0);
-        }*/
+        }
     }//GEN-LAST:event_btnActivarActionPerformed
 
     private void formMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseDragged

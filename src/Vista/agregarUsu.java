@@ -612,7 +612,7 @@ public class agregarUsu extends javax.swing.JFrame {
                         empresa.setUsuarioIdUsuario(usuario);
                         controllerEmpresa.create(empresa);
                         limpiar();
-                        JOptionPane.showMessageDialog(this, "El profesional código " + usuario.getRut() + " se ha creado satisfactoriamente.", "Confirmación", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(this, "El cliente código " + usuario.getRut() + " se ha creado satisfactoriamente.", "Confirmación", JOptionPane.INFORMATION_MESSAGE);
 
                     } catch (Exception e) {
                         JOptionPane.showMessageDialog(this, e.getMessage(), "Validación", JOptionPane.INFORMATION_MESSAGE);

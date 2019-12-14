@@ -846,7 +846,8 @@ public class inicioAdminstrador extends javax.swing.JFrame {
     }//GEN-LAST:event_planificacionCapacitacionMouseClicked
 
     private void modificarClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarClienteMouseClicked
-        
+        editUsu eu = new editUsu();
+        eu.setVisible(true);
     }//GEN-LAST:event_modificarClienteMouseClicked
 
     private void modificarProfesionalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarProfesionalMouseClicked
